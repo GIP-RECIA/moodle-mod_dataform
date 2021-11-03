@@ -19,8 +19,4 @@
  * @copyright 2012 Itamar Tzadok
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$subplugins = array(
-    'dataformfield'  => 'mod/dataform/field',
-    'dataformview' => 'mod/dataform/view',
-    'dataformtool' => 'mod/dataform/tool',
-);
+$subplugins = (array) json_decode(file_get_contents(__DIR__ . "/subplugins.json"))->plugintypes;
